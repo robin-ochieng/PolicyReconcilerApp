@@ -1,0 +1,71 @@
+/* custom_styles.css */
+
+/* Apply the Mulish font to the entire body of the app */
+body {
+    font-family: 'Mulish', sans-serif; /* Use the Mulish font for all text */
+    background-color: #f4f4f4; /* Optional: set a background color */
+}
+
+/* Style for the plan selector container to center the input and add margin */
+.plan-selector-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Style for the plan selector input to increase its width and ensure it fits within its container */
+.plan-selector {
+    width: 400px;  /* Set a fixed width in pixels for the select input */
+    max-width: 100%; /* Ensure it doesn't exceed the width of its parent container */
+    text-align: center; /* Center the label text */
+}
+
+/* General style for buttons used in the control bar */
+.btn-primary {
+    background-color: #007bff; /* Set button background color to primary blue */
+    color: white; /* Set button text color to white */
+    font-size: 16px; /* Set font size to 16px */
+}
+
+/* Style for the cards in the app body */
+.card-custom {
+    background-color: #007bff; /* Set the background color for the card */
+    padding: 20px; /* Add padding inside the card */
+    border-radius: 10px; /* Round the corners of the card */
+    color: white; /* Set the text color to white */
+    margin-bottom: 20px; /* Add space below the card */
+}
+
+/* Ensure that selectInput elements inside .card-custom have appropriate styles */
+.card-custom select {
+    background-color: white; /* Set the background of the select input to white */
+    color: black; /* Set the text color to black */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 14px; /* Set font size */
+    padding: 5px; /* Add some padding for better appearance */
+    width: 100%; /* Make the select input take full width of its container */
+}
+
+/* Optional: Adjust label color inside .card-custom if needed */
+.card-custom label {
+    color: white; /* Keep labels white to contrast with the blue background */
+}
+
+/* Style for the error messages in Shiny */
+.shiny-output-error {
+    color: #ff0000; /* Set error message color to red */
+}
+
+/* Prefix the error message with "Error: " */
+.shiny-output-error:before {
+    content: 'Error: ';
+}
+
+/* Style for the well panel */
+.well {
+    background-color: #ffffff; /* Set the background color of the well panel */
+    border-radius: 8px; /* Round the corners of the well panel */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add a subtle shadow for depth */
+}
+

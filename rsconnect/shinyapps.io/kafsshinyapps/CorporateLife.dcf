@@ -1,0 +1,12 @@
+name: CorporateLife
+title: CorporateLife
+username: kafsshinyapps
+account: kafsshinyapps
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12521653
+bundleId: 9026764
+url: https://kafsshinyapps.shinyapps.io/CorporateLife/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
