@@ -12,7 +12,9 @@ library(DT)
 source("modules/dataReconSummaryModule.R")
 source("modules/currentValuationSummaryModule.R")
 source("modules/planSummaryModule.R")
+source("modules/dataUsedModule.R")
 
+# Define the User Interface for the Application
 # Increase max file size to 100 MB
 options(shiny.maxRequestSize = 2000 * 1024^2)
 
@@ -56,7 +58,8 @@ ui <- dashboardPage(
       bs4SidebarMenuItem("Current Val Data", tabName = "viewCurValData", icon = icon("calendar-check")),
       bs4SidebarMenuItem("Data Reconciliation", tabName = "dataRecon", icon = icon("sync-alt")),
       bs4SidebarMenuItem("Valuation Summary", tabName = "valSummary", icon = icon("chart-bar")),
-      bs4SidebarMenuItem("Plan Summaries", tabName = "planSummary", icon = icon("book"))
+      bs4SidebarMenuItem("Plan Summaries", tabName = "planSummary", icon = icon("book")),
+      bs4SidebarMenuItem("Data Used", tabName = "dataUsedTab", icon = icon("database"))
     )
   ),
   controlbar = bs4DashControlbar(
@@ -153,6 +156,10 @@ ui <- dashboardPage(
       bs4TabItem(
         tabName = "planSummary",
         planSummaryUI("planSummaryModule")
+      ),
+      bs4TabItem(
+        tabName = "dataUsedTab",
+        dataUsedUI("dataUsed")
       )
     )
   )
@@ -291,7 +298,9 @@ server <- function(input, output, session) {
 
   # Call the module server function for valuation summaries
   planSummaryServer("planSummaryModule", summaryData = summaryData)
-
+ 
+  # Call the module server function for data used
+  dataUsedServer("dataUsed", curData = processedCurValData)
 }
 
 # Run the application
