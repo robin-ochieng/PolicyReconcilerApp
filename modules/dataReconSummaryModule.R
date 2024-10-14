@@ -49,8 +49,8 @@ dataReconSummaryServer <- function(id, prevData, curData) {
     }, options = list(scrollX = TRUE, pageLength = 50, autoWidth = FALSE, paging = TRUE, searching = FALSE, info = FALSE,
                         initComplete = JS("function(settings, json) {",
                                           "  $(this.api().table().header()).css({",
-                                          "    'background-color': '#007BFF',", 
-                                          "    'color': '#FFFFFF'",  
+                                          "    'background-color': '#FFFFFF',", 
+                                          "    'color': '#000000'",  
                                           "  });",
                                           "}")))
 
@@ -80,8 +80,8 @@ dataReconSummaryServer <- function(id, prevData, curData) {
                 options = list(scrollX = TRUE, pageLength = 50, autoWidth = FALSE, paging = TRUE, searching = FALSE, info = FALSE,
                               initComplete = JS("function(settings, json) {",
                                                 "  $(this.api().table().header()).css({",
-                                                "    'background-color': '#007BFF',", 
-                                                "    'color': '#FFFFFF'",  
+                                                "    'background-color': '#FFFFFF',", 
+                                                "    'color': '#000000'",  
                                                 "  });",
                                                 "}")))
     })
@@ -142,8 +142,8 @@ dataReconSummaryServer <- function(id, prevData, curData) {
                 options = list(scrollX = TRUE, pageLength = 50, autoWidth = FALSE, paging = TRUE, searching = FALSE, info = FALSE,
                               initComplete = JS("function(settings, json) {",
                                                 "  $(this.api().table().header()).css({",
-                                                "    'background-color': '#007BFF',", 
-                                                "    'color': '#FFFFFF'",  
+                                                "    'background-color': '#FFFFFF',", 
+                                                "    'color': '#000000'",  
                                                 "  });",
                                                 "}")))
     }) 

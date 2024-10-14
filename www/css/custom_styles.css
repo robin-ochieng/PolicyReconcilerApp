@@ -1,5 +1,4 @@
 /* custom_styles.css */
-
 /* Apply the Mulish font to the entire body of the app */
 body {
     font-family: 'Mulish', sans-serif; /* Use the Mulish font for all text */
@@ -147,3 +146,5 @@ body {
     padding: 10px;
     z-index: 1030;
 }
+
+

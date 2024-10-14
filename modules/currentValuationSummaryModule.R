@@ -52,8 +52,8 @@ currentValuationSummaryServer <- function(id, curData) {
                                               ),
                                               initComplete = JS("function(settings, json) {",
                                                                 "  $(this.api().table().header()).css({",
-                                                                "    'background-color': '#007BFF',", 
-                                                                "    'color': '#FFFFFF'",  
+                                                                "    'background-color': '#FFFFFF',", 
+                                                                "    'color': '#000000'",  
                                                                 "  });",
                                                                 "}")))
   })
