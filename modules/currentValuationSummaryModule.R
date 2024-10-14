@@ -5,7 +5,7 @@ currentValuationSummaryUI <- function(id) {
     bs4Card(
       width = 12,
       title = "Current Valuation Data Summary",
-      status = "primary",
+      status = "white",
       solidHeader = TRUE,
       collapsible = TRUE,
       DTOutput(ns("currentValSummary"))

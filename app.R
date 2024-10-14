@@ -41,18 +41,20 @@ ui <- dashboardPage(
   scrollToTop = TRUE,
   freshTheme = my_theme,
   header = bs4DashNavbar(
-    status = "primary",
+    status = "white",
     skin = "dark",
-    title = dashboardBrand(
-      title = "Corporate Life App",
-      color = "primary",
-      image = ""
+    controlbarIcon = NULL,
+    sidebarIcon = NULL,
+    tags$li(
+      class = "text-center header-title-container",  # Added a new class for more specific styling
+      tags$h4("Life Application Dashboard", class = "header-title")
     ),
-    actionButton("toggleControlbar", "Input Controls", class = "btn btn-primary")
+    tags$div(class = "control-bar", actionButton("toggleControlbar", "Input Controls", class = "btn btn-primary control-button"))
   ),
   sidebar = bs4DashSidebar(
     skin = "light",
-    collapsed = TRUE,
+    collapsed = FALSE,
+    minified = FALSE,
     bs4SidebarMenu(
       bs4SidebarMenuItem("Previous Val Data", tabName = "viewPrevValData", icon = icon("file-invoice-dollar")),
       bs4SidebarMenuItem("Current Val Data", tabName = "viewCurValData", icon = icon("calendar-check")),
@@ -60,6 +62,9 @@ ui <- dashboardPage(
       bs4SidebarMenuItem("Valuation Summary", tabName = "valSummary", icon = icon("chart-bar")),
       bs4SidebarMenuItem("Plan Summaries", tabName = "planSummary", icon = icon("book")),
       bs4SidebarMenuItem("Data Used", tabName = "dataUsedTab", icon = icon("database"))
+    ),
+    div(class = "sidebar-footer",
+        img(src = "images/kenbright.png")
     )
   ),
   controlbar = bs4DashControlbar(
@@ -72,7 +77,7 @@ ui <- dashboardPage(
       style = "max-width: 100%;",
       status = "primary",
       solidHeader = TRUE,
-      collapsible = TRUE,
+      collapsible = FALSE,
       br(),
       actionButton("loadAllData", "RUN", class = "btn btn-primary")
     )
@@ -107,7 +112,7 @@ ui <- dashboardPage(
                    br(),
                    bs4Card(
                      title = "Previous Valuation Data Overview",
-                     status = "primary",
+                     status = "white",
                      solidHeader = TRUE,
                      width = 12,
                      DTOutput("viewPrevValData")
@@ -138,7 +143,7 @@ ui <- dashboardPage(
                    br(),
                    bs4Card(
                      title = "Current Valuation Data Overview",
-                     status = "primary",
+                     status = "white",
                      solidHeader = TRUE,
                      width = 12,
                      DTOutput("viewCurValData")
@@ -161,7 +166,8 @@ ui <- dashboardPage(
         tabName = "dataUsedTab",
         dataUsedUI("dataUsed")
       )
-    )
+    ),
+    div(class = "body-footer", "© 2024 Life Dashboard")
   )
 )
 

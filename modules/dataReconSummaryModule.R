@@ -5,7 +5,7 @@ dataReconSummaryUI <- function(id) {
     bs4Card(
       width = 12,
       title = "Summary of Previous Valuation Data",
-      status = "primary",
+      status = "white",
       solidHeader = TRUE,
       collapsible = TRUE,
       DTOutput(ns("summaryPrevVal"))
@@ -13,7 +13,7 @@ dataReconSummaryUI <- function(id) {
     bs4Card(
       width = 12,
       title = "Summary of Current Valuation Data",
-      status = "primary",
+      status = "white",
       solidHeader = TRUE,
       collapsible = TRUE,
       DTOutput(ns("summaryCurVal"))
@@ -21,7 +21,7 @@ dataReconSummaryUI <- function(id) {
     bs4Card(
       width = 12,
       title = "Ordinary Life Data Reconciliation as at Current Valuation Date",
-      status = "primary",
+      status = "white",
       solidHeader = TRUE,
       collapsible = TRUE,
       downloadButton(ns("downloaddataReconSummary"), "Download Data Reconciliation Summary", class = "btn btn-primary"),

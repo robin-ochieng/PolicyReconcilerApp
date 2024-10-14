@@ -69,3 +69,81 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add a subtle shadow for depth */
 }
 
+.control-bar {
+    position: absolute;
+    right: 0; 
+    top: 50%; 
+    transform: translateY(-50%);
+  }
+  
+.control-button {
+    margin-right: 10px; 
+    background-color: #007bff;
+    color: white; ;
+  }
+
+  /* custom_styles.css */
+  .sidebar-footer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    text-align: centre;
+    padding: 10px 0; /* Add padding to give some space around the logo */
+    background-color: #fff; /* Light background color to distinguish the logo area */
+    z-index: 1050;
+}
+  
+  .sidebar-footer img {
+    height: 60px; /* Adjust the height of the logo as needed */
+    max-width: 100%; /* Ensure the logo scales within the container */
+    background-color: #ffffff; /* Optional: Add a background behind the logo */
+    border-radius: 8px; /* Optional: Add rounded corners for a modern look */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a more professional look */
+    padding: 10px; /* Optional: Add a slight shadow around the logo */
+  }
+
+
+  /* Set the background color of the sidebar */
+.main-sidebar {
+    background-color: #fff !important;  /* Apply the desired color */
+    box-shadow: none !important;
+    padding-top: 160px;
+  }
+  
+/* Style container to remove list style and position correctly */
+.header-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start of the container */
+    margin-left: 0; /* Match the sidebar width */
+    position: relative; /* Ensure the container is positioned correctly */
+    width: 310px; /* Match the width of the sidebar-footer */
+    text-align: left; /* Center the title text */
+    padding: 5px 0; /* Add padding to give some space around the title */
+    background-color: #fff; /* Light background color to distinguish the title area */
+    border-radius: 8px; /* Optional: Add rounded corners for a modern look */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a more professional look */
+
+}
+
+/* Style for the header title */
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0137A6;
+    padding-left: 5px; /* Space after the vertical line */
+}
+
+/* Footer styling */
+.body-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f4f2ee;
+    color: #0137A6;
+    text-align: center;
+    padding: 10px;
+    z-index: 1030;
+}

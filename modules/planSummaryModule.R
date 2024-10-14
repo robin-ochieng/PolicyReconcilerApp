@@ -11,7 +11,7 @@ planSummaryUI <- function(id) {
     bs4Card(
       width = 12,
       title = "Plan Specific Summaries",
-      status = "primary",
+      status = "white",
       solidHeader = TRUE,
       collapsible = TRUE,
       downloadButton(ns("downloadPlanSummary"), "Download Plan Summaries", class = "btn btn-primary"),

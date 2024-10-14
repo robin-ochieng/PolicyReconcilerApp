@@ -5,7 +5,7 @@ dataUsedUI <- function(id) {
     bs4Card(
       width = 12,
       title = "Data Used for Valuation",
-      status = "primary",
+      status = "white",
       solidHeader = TRUE,
       collapsible = TRUE,
       downloadButton(ns("downloadDataUsed"), "Download Data Used for Valuation", class = "btn btn-primary"),
