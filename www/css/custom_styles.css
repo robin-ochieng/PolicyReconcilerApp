@@ -94,7 +94,7 @@ body {
 }
   
   .sidebar-footer img {
-    height: 60px; /* Adjust the height of the logo as needed */
+    height: 70px; /* Adjust the height of the logo as needed */
     max-width: 100%; /* Ensure the logo scales within the container */
     background-color: #ffffff; /* Optional: Add a background behind the logo */
     border-radius: 8px; /* Optional: Add rounded corners for a modern look */
@@ -107,7 +107,7 @@ body {
 .main-sidebar {
     background-color: #fff !important;  /* Apply the desired color */
     box-shadow: none !important;
-    padding-top: 160px;
+    padding-top: 200px;
   }
   
 /* Style container to remove list style and position correctly */
