@@ -28,6 +28,14 @@ body {
     font-size: 16px; /* Set font size to 16px */
 }
 
+/* Style for the container holding the cards */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the cards horizontally */
+    justify-content: center; /* Centers the cards vertically, if needed */
+  }
+
 /* Style for the cards in the app body */
 .card-custom {
     background-color: #ffffff; /* Set the background color for the card */
@@ -35,6 +43,8 @@ body {
     border-radius: 10px; /* Round the corners of the card */
     color: black; /* Set the text color to white */
     margin-bottom: 20px; /* Add space below the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for depth */
+
 }
 
 /* Ensure that selectInput elements inside .card-custom have appropriate styles */
@@ -81,6 +91,8 @@ body {
     margin-right: 10px; 
     background-color: #007bff;
     color: white; ;
+    padding: 8px 16px; /* Adjust padding to control overall button size */
+    font-size: 16px; /* Initial font size */
   }
 
   /* custom_styles.css */
@@ -150,31 +162,3 @@ body {
 }
 
 
-/* Sidebar Items ----------------------------------------------------------------------------------*/
-.menu-container {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start; /* Align items to the start of the container */
-    margin: 10px 10px 10px 10px; /* Match the sidebar width */
-    position: relative; /* Ensure the container is positioned correctly */
-    width: 225px; /* Match the width of the sidebar-footer */
-    padding: 10px 5px; /* Add padding to give some space around the title */
-    background-color: #fff; /* Light background color to distinguish the title area */
-    border-radius: 8px; /* Optional: Add rounded corners for a modern look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.05);/* Subtle shadow for a more professional look */
-    font-family: 'Mulish', sans-serif;
-    z-index: 1050;
-    margin-left: 2px;
-}
-
-.menu-title {
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #0137A6;
-    text-align: left; /* Space after the vertical line */
-    padding-left: 30px;
-    /* Add a line move it next to the title */
-    border-left: 3px solid #0137A6;
-
-}

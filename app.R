@@ -64,7 +64,7 @@ ui <- bs4DashPage(
       bs4SidebarMenuItem("Data Reconciliation", tabName = "dataRecon", icon = icon("sync-alt")),
       bs4SidebarMenuItem("Valuation Summary", tabName = "valSummary", icon = icon("chart-bar")),
       bs4SidebarMenuItem("Plan Summaries", tabName = "planSummary", icon = icon("book")),
-      bs4SidebarMenuItem("Data Used", tabName = "dataUsedTab", icon = icon("database"))
+      bs4SidebarMenuItem("Policy Data", tabName = "dataUsedTab", icon = icon("database"))
     )),
     div(class = "sidebar-logo",
         img(src = "images/kenbright.png")
@@ -88,7 +88,8 @@ ui <- bs4DashPage(
   body = bs4DashBody(
     tags$head(
       includeCSS("www/css/custom_styles.css"),
-      tags$link(href = "https://fonts.googleapis.com/css?family=Mulish", rel = "stylesheet")
+      tags$link(href = "https://fonts.googleapis.com/css?family=Mulish", rel = "stylesheet"),
+      tags$script(src = "www/javascript/sidebarToggle.js")
     ),
     bs4TabItems(
       bs4TabItem(tabName = "viewPrevValData",
