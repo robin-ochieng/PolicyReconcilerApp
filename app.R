@@ -57,7 +57,7 @@ ui <- bs4DashPage(
     minified = FALSE,
   tags$div(
     class = "menu-container",
-    tags$h3("Valuation Control Panel", class = "menu-title"),
+    tags$h3("Valuation Menu Tabs", class = "menu-title"),
     bs4SidebarMenu(
       bs4SidebarMenuItem("Previous Val Data", tabName = "viewPrevValData", icon = icon("file-invoice-dollar")),
       bs4SidebarMenuItem("Current Val Data", tabName = "viewCurValData", icon = icon("calendar-check")),
