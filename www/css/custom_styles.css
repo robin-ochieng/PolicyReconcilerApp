@@ -136,7 +136,7 @@ body {
     padding: 5px 0; /* Add padding to give some space around the title */
     background-color: #fff; /* Light background color to distinguish the title area */
     border-radius: 8px; /* Optional: Add rounded corners for a modern look */
-    border 1px solid #0137A6;
+    border: 1px solid #0137A6;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a more professional look */
 
 }
