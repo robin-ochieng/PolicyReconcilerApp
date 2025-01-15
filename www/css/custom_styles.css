@@ -131,13 +131,13 @@ body {
     justify-content: flex-start; /* Align items to the start of the container */
     margin-left: 0; /* Match the sidebar width */
     position: relative; /* Ensure the container is positioned correctly */
-    width: 310px; /* Match the width of the sidebar-footer */
+    width: 315px; /* Match the width of the sidebar-footer */
     text-align: left; /* Center the title text */
     padding: 5px 0; /* Add padding to give some space around the title */
     background-color: #fff; /* Light background color to distinguish the title area */
     border-radius: 8px; /* Optional: Add rounded corners for a modern look */
-    border: 1px solid #0137A6;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a more professional look */
+    border: 1px solid #a5bef0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for a more professional look */
 
 }
 
@@ -167,5 +167,6 @@ body {
     font-weight: bold;
     color: #0137A6;
     text-decoration: underline;
+    margin-bottom: 20px;
 }
 
