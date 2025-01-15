@@ -12,7 +12,7 @@ library(DT)
 source("modules/dataReconSummaryModule.R")
 source("modules/currentValuationSummaryModule.R")
 source("modules/planSummaryModule.R")
-source("modules/dataUsedModule.R")
+source("modules/policyDataModule.R")
 
 # Define the User Interface for the Application
 # Increase max file size to 100 MB
@@ -34,7 +34,7 @@ my_theme <- bs_theme(
 
 
 # Define the User Interface for the Application
-ui <- dashboardPage(
+ui <- bs4DashPage(
   dark = NULL,
   help = NULL,
   fullscreen = FALSE,
@@ -52,9 +52,12 @@ ui <- dashboardPage(
     tags$div(class = "control-bar", actionButton("toggleControlbar", "Input Controls", class = "btn btn-primary control-button"))
   ),
   sidebar = bs4DashSidebar(
-    skin = "light",
+    skin = NULL,
     collapsed = FALSE,
     minified = FALSE,
+  tags$div(
+    class = "menu-container",
+    tags$h3("Valuation Control Panel", class = "menu-title"),
     bs4SidebarMenu(
       bs4SidebarMenuItem("Previous Val Data", tabName = "viewPrevValData", icon = icon("file-invoice-dollar")),
       bs4SidebarMenuItem("Current Val Data", tabName = "viewCurValData", icon = icon("calendar-check")),
@@ -62,8 +65,8 @@ ui <- dashboardPage(
       bs4SidebarMenuItem("Valuation Summary", tabName = "valSummary", icon = icon("chart-bar")),
       bs4SidebarMenuItem("Plan Summaries", tabName = "planSummary", icon = icon("book")),
       bs4SidebarMenuItem("Data Used", tabName = "dataUsedTab", icon = icon("database"))
-    ),
-    div(class = "sidebar-footer",
+    )),
+    div(class = "sidebar-logo",
         img(src = "images/kenbright.png")
     )
   ),
@@ -82,7 +85,7 @@ ui <- dashboardPage(
       actionButton("loadAllData", "RUN", class = "btn btn-primary")
     )
   ),
-  body = dashboardBody(
+  body = bs4DashBody(
     tags$head(
       includeCSS("www/css/custom_styles.css"),
       tags$link(href = "https://fonts.googleapis.com/css?family=Mulish", rel = "stylesheet")
@@ -306,8 +309,10 @@ server <- function(input, output, session) {
   planSummaryServer("planSummaryModule", summaryData = summaryData)
  
   # Call the module server function for data used
-  dataUsedServer("dataUsed", curData = processedCurValData)
+  dataUsedServer("dataUsed", curData = processedCurValData, curValDate = reactive(input$curValDate))
 }
+
+
 
 # Run the application
 shinyApp(ui = ui, server = server)
